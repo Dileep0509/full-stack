@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="user-name">Name</label>
+            <input type="text" name="user-name" id="name">
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+      
+        </div>
+        <br>
+        
+        <div>
+            <textarea name="feedback" id="feedback" placeholder="Enter your Feedback here" rows="5" cols="30"></textarea>
+        </div>
+        <br>
+        
+        <div>
+            <label for="rating"><b>Service Rating</b></label>
+            <input type="range" name="rating" id="rating" min="1" max="10" step="1">
+        </div>
+        <br>
+        
+        <div>
+            <label for="feedback-type"><b>Feedback Type</b></label>
+            <br>
+            <input type="radio" name="feedback-type" id="compliment" value="feedback-type">
+            <label for="compliment">Compliment</label>
+            <br>
+
+            <input type="radio" name="feedback-type" id="complaint" value="feedback-type">
+            <label for="complaint">Complaint</label>
+            <br>
+
+            <input type="radio" name="feedback-type" id="suggestion" value="feedback-type">
+            <label for="suggestion">Suggestion</label>
+            <br>
+        </div>
+        <br>
+
+        <div id="feedback-policy">
+            <h3>feedback policy</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, a nihil. Eligendi accusantium itaque enim ullam magni deserunt. Maiores rerum tenetur sunt eveniet provident voluptatem dolor molestiae eius ducimus nesciunt.
+            Vel cumque harum ratione mollitia! Qui modi sapiente minima porro. Non cumque nisi deserunt quia assumenda, veniam accusantium maiores optio, fugit fugiat totam atque nam, debitis eius nostrum neque voluptate?
+            Eius distinctio, culpa, doloribus ex perferendis numquam libero eum dolor nam maiores aut fugit eveniet soluta incidunt dicta repellendus, itaque dolore ducimus. Minima hic quod beatae nihil a sunt commodi.
+            </p>
+            <p><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nam. Cumque architecto modi obcaecati nihil tempora alias vero animi maiores facere, ipsam laudantium, reiciendis, ipsum placeat ut corporis consequuntur. Obcaecati.</i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores obcaecati, ad accusamus ea libero totam a magni, ipsam eos reiciendis hic. Est assumenda cumque ad repellendus, asperiores modi. Voluptatibus, maiores.
+            Consectetur nulla deserunt commodi porro qui! <u>Earum voluptates ad sit similique expedita eum blanditiis provident commodi voluptatum explicabo neque velit repellendus repudiandae excepturi dignissimos, cumque dolores atque corporis vel maxime?
+                Praesentium, tempora ab magnam eligendi cupiditate accusamus inventore voluptatum,</u> sed placeat mollitia sequi reiciendis pariatur eaque esse aut nesciunt consectetur harum minima dolorem? Velit, sunt quis quas distinctio quia facilis?</p>
+            <br>
+
+            <input type="checkbox" name="feedback-policy" id="feedback-policy" required>
+            <label for="feedback-policy"><strong>I agree to the feedback policy</strong></label>
+
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+
+        <div>
+            <a href="#feedback-policy">feedback policy</a>
+        </div>
+
+
+
+    </form>
+</body>
+</html>
