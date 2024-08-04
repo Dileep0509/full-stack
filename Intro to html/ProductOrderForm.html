@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Order Form</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username">
+            <br><br>
+            <label for="useremail">Email</label>
+            <input type="email" name="useremail" id="useremail" required>
+        </div>
+        <br>
+        <div>
+            <label for="product-category">Select Product Category :</label>
+            <select name="ProductCategory" id="product-category">
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="clothing">Clothing</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="quantity"> Quantity</label>
+            <input type="number" name="quantity" id="quantity" min="1" max="10" step="1" placeholder="1">
+
+        </div>
+        <br>
+
+        <div>
+            <label for="delivery-date">Delivery date :</label>
+            <input type="date" name="delivery-date" id="delivery-date" min="2024-08-04">
+            <label for="deleivery-time">Time :</label>
+            <input type="time" name="delivery-time" id="delivery-time" min="09:00" max="18:00" value="09:00">
+        </div>
+        <br>
+
+        <div>
+            <textarea name="notes" id="notes" rows="5" cols="30" placeholder="Enter your notes here"></textarea>
+        </div>
+        <br>
+
+        <div>
+            <label for="paymetn-options">Payment Option</label>
+            <br>
+            <input type="checkbox" name="credit-card" id="credit-card">
+            <label for="credit-card">Credit Card</label>
+            <input type="checkbox" name="paypal" id="paypal">
+            <label for="paypal">Paypal</label>
+            <input type="checkbox" name="bank-taransfer" id="bank-transfer">
+            <label for="bank-transfer">Bank Transfer</label>
+
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" value="submit">
+        </div>
+
+    </form>
+</body>
+</html>
