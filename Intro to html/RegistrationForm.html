@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="FullName">Full name :</label>
+            <input type="text" name="FullName" placeholder="Enter your Full Name">
+        </div>
+        <br>
+
+        <div>
+            <label for="Email">Email  :</label>
+            <input type="email" name="Email" id="Email" placeholder="Enter your Email" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="Password">Password :</label>
+            <input type="password" name="Password" id="Password" maxlength="20" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="ConfirmPassword">Confirm Password : </label>
+            <input type="password" name="ConfirmPassword" id="Confirm-Password" maxlength="20" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="Date">DOB :</label>
+            <input type="date" name="DOB" id="bday" max="2006-12-31" required>
+        
+        </div>
+        <br>
+
+        <div>
+            <label for="gender">Gender :</label>
+            <select name="gender" id="gender">
+                <option value="select-Gender">Select your Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>   
+        </div>
+        <br>
+
+        <div>
+            <label for="subscription">Subscription Type :</label>
+           <input type="radio" name="Subscription" id="free" value ="free">
+        <label for="free">Free</label>
+        <input type="radio" name="Subscription" id="basic" value ="basic">
+        <label for="basic">Basic</label>
+        <input type="radio" name="Subscription" id="premium" value="premium">
+        <label for="premium">Premium</label>
+        </div>
+        <br>
+         
+        <div>
+            <label for="Hobbies">Hobbies :</label>
+            <br>
+            <input type="checkbox" name="hobbies" id="reading"/>
+            <label for="reading">Reading</label>
+            <input type="checkbox" name="hobbies" id="traveling"/>
+            <label for="traveling">Traveling</label>
+            <input type="checkbox" name="hobbies" id="coding"/>
+            <label for="coding">Coding</label>
+            <input type="checkbox" name="hobbies" id="sports"/>
+            <label for="sports">Sports</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="picture">Upload Image :</label>
+            <input type="file" name="profilepicture" id="picture"  accept="image/png, image/jpeg" required/>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" name="submit" id="submit">
+        </div>
+
+      
+
+    </form>
+</body>
+</html>
