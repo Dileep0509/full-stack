@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study layout</title>
+    <style>
+        .container{
+            border: none;
+        }
+        .nav-container{
+            
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+            gap: 20px;
+        }
+        .logo{
+            width: 50%;
+        }
+        .logo img{
+            height: 100px;
+        }
+        .nav-header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            width: 50%;  
+        }
+        .nav-header h3{
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        #home{
+            color: blue;
+        }
+        .content-section{
+            display: flex;  
+        }
+        .info-card1{
+            width: 50%;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            
+        }
+        .video-watch{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+        }
+        .video-watch img{
+            height: 150px;
+            width: 250px;
+        }
+        .info-card1 p{
+            font-size: 14px;
+            color: gray;
+        }
+        .info-card1 h1,h4,h5{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .info-card1 h5{
+            color: blue;
+        }
+        .info-card2{
+            width: 50%;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .cards{
+            width: 40%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 20px;
+            
+        }
+        .cards img{
+            height: 50px;
+            width: 50px;
+            border:none;
+            border-radius: 50px;
+        }
+        .cards h3{
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .cards p{
+            font-size: 14px;
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="nav-container">
+          
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_RHGeLI9CDkOybM2wt-UnK-5uCsWSQfYchQ&s"
+                alt="Study image">
+            </div>
+
+            <div class="nav-header">
+                <h3 id="home">Home</h3>
+                <h3 id="about">About</h3>
+                <h3 id="course">Course</h3>
+                <h3 id="instructor">Instructor</h3>
+                <h3 id="blog">Blog</h3>
+                <h3 id="contact">Contact</h3>
+           </div>
+       </div>
+
+        <div class="content-section">
+            <div class="info-card1">
+                
+                    <h5>WELCOME TO E-LEARNING FREAK</h5>
+                    <h1>We Are E-learning Freak An Online Learning Center</h1>
+                    <p>Once upon a time, in a lush valley surrounded by mountains, there flowed a serene river named Seraphina. 
+                        Her crystal-clear waters reflected the azure sky and vibrant greenery, providing sustenance and joy to animals and villagers alike.
+                        As seasons changed, Seraphina transformed too—swelling with melting snow in spring, calming in summer, and slowing but never freezing in winter.
+                    </p>
+                    <p>One year, a severe drought threatened the valley, and Seraphina’s waters dwindled. Inspired by her perseverance, the villagers conserved water and supported each other.
+                        Eventually, the rains returned, filling Seraphina once more and reminding everyone of nature’s enduring power and the importance of unity.
+                    </p>
+                <div class="video-watch">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRkEBeufNSmszUpw5G7vQs4QNBKbFd5RDrCQ&s"
+                    alt="watch video">
+                    <h4>Learn anything from E-learning freak,<br> Watch video</h4>
+                </div>
+            </div>
+            <div class="info-card2">
+                <div class="cards">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9743/9743163.png" alt="content">
+                    <h3>Top Quality Content</h3>
+                    <p>A small river named </p>
+                    <p>Duden flows by their</p>
+                    <p>place and supplies</p>   
+                </div>
+                <div class="cards">
+                    <img src="https://cdn-icons-png.flaticon.com/128/943/943390.png" alt="instructor">
+                    <h3>Top Quality Content</h3>
+                    <p>A small river named </p>
+                    <p>Duden flows by their</p>
+                    <p>place and supplies</p> 
+                </div>
+                <div class="cards">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3407/3407038.png" alt="quiz">
+                    <h3>Top Quality Content</h3>
+                    <p>A small river named </p>
+                    <p>Duden flows by their</p>
+                    <p>place and supplies</p> 
+                </div>
+                <div class="cards">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3712/3712242.png" alt="certified">
+                    <h3>Top Quality Content</h3>
+                    <p>A small river named </p>
+                    <p>Duden flows by their</p>
+                    <p>place and supplies</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
