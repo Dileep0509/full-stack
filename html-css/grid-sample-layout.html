@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample grid layout</title>
+    <style>
+        .container{
+            margin: 20px;
+            padding: 20px;
+            background-color: orange;
+            display: grid;
+            grid-template-rows: repeat(3,100px);
+            grid-template-columns: repeat(4,1fr);
+            grid-template-areas:
+                'a a b b'
+                'c d d d'
+                'e e e e'
+            ;
+
+            gap: 10px;
+        }
+        .grid-item1{
+            grid-area: a;
+            
+        }
+        .grid-item2{
+            grid-area: b;
+        }
+        .grid-item3{
+            grid-area: c;
+            
+        }
+        .grid-item4{
+            grid-area: d;
+            
+        }
+        .grid-item5{
+            grid-area: e;
+            
+        }
+        .container div{
+            border: 1px solid black;
+            background-color: purple;
+            padding: 20px 20px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-item1" >A</div>
+        <div class="grid-item2">B</div>
+        <div class="grid-item3">C</div>
+        <div class="grid-item4">D</div>
+        <div class="grid-item5">E</div>
+    </div>
+</body>
+</html>
