@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries  </title>
+    <style>
+        .container{
+            background-color: #fffaf0 ;
+            margin: 10px ;
+            padding: 10px;
+            display: grid;
+            grid-template-rows: repeat(3,auto);
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            grid-template-areas: 
+                   'cappuccino americano espresso'
+                    'macchiato mocha coffeelatte'
+                    'piccololatte ristretto affogato'
+                    ;
+            }
+            
+        .item1{
+            grid: cappuccino;
+        }
+        .item2{
+            grid: americano;
+        }
+        .item3{
+            grid: espresso;
+        }
+        .item4{
+            grid: macchiato;
+        }
+        .item5{
+            grid: mocha;
+        }
+        .item6{
+            grid: coffeelatte;
+        }
+        .item7{
+            grid: piccololatte;
+        }
+        .item8{
+            grid: ristretto;
+        }
+        .item9{
+            grid: affogato;
+        }
+        .container div {
+            
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: #fefefa;
+            border-radius: 5px;
+            padding: 2px 20px;
+        }
+        .container div >p{
+            color: gray;
+        }
+        .name-price{
+            
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .name-price h4{
+            color: #da9100 ;
+        }
+        /* medium screens*/
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            .container{
+                background-color: #fffaf0 ;
+                margin: 10px;
+                padding: 10px;
+                display: grid;
+                grid-template-rows: repeat(4,auto);
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+                
+                grid-template-areas: 
+                    'cappuccino americano '
+                    'espresso macchiato'
+                    'mocha coffeelatte'
+                    'piccololatte ristretto'
+                    
+                     
+                 ;
+             
+            }
+        }
+        /* small screens*/
+        @media all and (min-width: 320px) and (max-width: 767px) {
+            .container{
+                background-color: #fffaf0 ;
+                margin: 10px;
+                padding: 10px;
+                display: grid;
+                grid-template-rows: repeat(9,auto);
+                grid-template-columns: 1fr;
+                gap: 20px;
+                
+                grid-template-areas: 
+                    'cappuccino'
+                    'americano'
+                    'espresso'
+                    'macchiato'
+                    'mocha'
+                    'coffeelatte'
+                    'piccololatt'
+                    'ristretto'
+                    'affogato'
+                     
+                 ;
+             
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+            <div class="item1">
+                <section class="name-price">
+                    <h3>Cappuccino</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div>
+
+            <div class="item2">
+                <section class="name-price">
+                    <h3>Americano</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div>
+
+            <div class="item3">
+                <section class="name-price">
+                    <h3>Espresso</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div> 
+
+            <div class="item4">
+                <section class="name-price">
+                    <h3>Macchiato</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div>
+
+            <div class="item5">
+                <section class="name-price">
+                    <h3>Mocha</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div> 
+
+            <div class="item6">
+                <section class="name-price">
+                    <h3>Coffee Latte</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div> 
+
+            <div class="item7">
+                 <section class="name-price">
+                    <h3>Piccolo Latte</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div> 
+
+            <div class="item8">
+                <section class="name-price">
+                    <h3>Ristretto</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div>
+
+            <div class="item9">
+                <section class="name-price">
+                    <h3>Affogato</h3>
+                    <h4>$49</h4>
+                </section>
+                <p>Usage of the internet is becoming more common due to rapid advance.</p>
+            </div>
+        
+    </div>
+</body>
+</html>
