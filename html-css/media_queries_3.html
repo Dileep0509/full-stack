@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+</head>
+<style>
+    .container{
+       
+        margin: 10px;
+        padding: 10px;
+
+        display: grid;
+        grid-template-rows: auto 100px;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        'logo main main'
+        'footer footer footer';
+    }
+    .logo-container{
+        height: auto;
+        grid-area: logo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000080;
+        padding: 30px;
+    }
+    .logo-container img{
+        height: 200px;
+        width: 200px;
+    }
+    .main{
+        grid-area: main;
+        background-color: #1e90ff ;
+        color: white;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .main p{
+    
+        color: #f5f5f5;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: black ;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .copyright-section{
+        display: flex;
+        gap: 10px;
+        
+    }
+    .copyright-section p{
+        color: #d3d3d3;
+    }
+
+    /* medium screens*/
+    @media all and (min-width:768px ) and (max-width:1024px){
+        .container{
+            height: 500px;
+            margin: 10px;
+            padding: 10px;
+            display: grid;
+            grid-template-rows: auto auto 100px;
+            grid-template-columns: auto;
+            grid-template-areas: 
+            'main'
+            'logo'
+            'footer'
+            ;
+        }
+        
+    }
+    /* small screens*/
+    @media all and (min-width:320px ) and (max-width:767px){
+        .container{
+            height: 500px;
+            padding: 10px;
+            display: grid;
+            grid-template-rows: 100px auto auto;
+            grid-template-columns: auto;
+            grid-template-areas: 
+            'footer'
+            'main'
+            'logo'
+            ;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="logo-container">1
+            <img src="data:image/png;base64,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" 
+            alt="">
+        </div>
+        <div class="main">
+            <div class="shop">
+                <h3>Shop</h3>
+                <p>Gist cards</p>
+                <p>Etsy REgistry</p>
+                <p>Sitemap</p>
+                <p>Etsy blog</p>
+                <p>Etsy United Kingdom</p>
+                <p>Etsy Germany</p>
+                <p>Etsy Canada</p>
+            </div>
+
+            <div class="sell">
+                <h3>Sell</h3>
+                <p>sell on Etsy</p>
+                <p>Teams</p>
+                <p>Forums</p>
+                <p>Affiliates & creators</p>
+            </div>
+
+            <div class="about">
+                <h3>About</h3>
+                <p>Etsy, Inc</p>
+                <p>Policies</p>
+                <p>Investors</p>
+                <p>Careers</p>
+                <p>Press</p>
+                <p>Impact</p>
+                <p>Legal Imprint</p>
+            </div>
+
+            <div class="shop">
+                <h3>Shop</h3>
+                <p>Gist cards</p>
+                <p>Etsy REgistry</p>
+                <p>Sitemap</p>
+                <p>Etsy blog</p>
+                <p>Etsy United Kingdom</p>
+                <p>Etsy Germany</p>
+                <p>Etsy Canada</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="location">
+                <h5>India | English (IN)  | INR</h5>
+                <h5></h5>
+            </div>
+
+            <div class="copyright-section">
+                <p>@2024 Etsy,Inc.</p>
+                <p><u>Terms of Use</u></p>
+                <p><u>Privacy</u></p>
+                <p><u>Interest-based ads</u></p>
+                <p><u>Local Shops</u></p>
+                <p><u>Regions</u></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
