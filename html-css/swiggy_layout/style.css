@@ -1,0 +1,136 @@
+
+#navbar{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+#navbar img{
+    margin:  5px 20px;
+    height: 50px;
+}
+#navbar div{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+#navbar div > p{
+    color: #1e90ff;
+    
+}
+#navbar button{
+    background-color: #ff4500;
+    border: white;
+    border-radius: 5px;
+    color: white;
+    padding:  0px 30px;
+}
+/*top section*/
+#top-section{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 40px ;
+    margin: 10px 0px;
+}
+#top-section img{
+    height: 200px;
+    width: 250px;
+}
+#mid-section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 10px 50px;
+    gap: 20px;
+}
+#mid-section div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#mid-section div >img {
+    height: 200px;
+    width: 100%;
+}
+#mid-section div >h2,p {
+    text-align: center;
+}
+/*bottom section*/
+#bottom-section div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 50px;
+}
+
+#bottom-section img{
+    height: 200px;
+    width: 250px;
+}
+
+/*medium screens*/
+@media all and (min-width: 768px) and (max-width: 1023px){
+    #navbar div{
+        display: none;
+        align-items: center;
+        gap: 100px;
+    }
+    #top-section{
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 40px ;
+        margin: 10px 0px;
+    }
+    #top-section img{
+        height: 100px;
+        width: 100px;
+    }
+    #mid-section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 10px 50px;
+        gap: 20px;
+    }
+    #bottom-section div{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 50px;
+    
+    }
+}
+/*small screens*/
+@media all and (min-width:340px) and (max-width:767px){
+    #navbar div{
+        display: none;
+        align-items: center;
+        gap: 100px;
+    }
+    #top-section{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 40px ;
+        margin: 10px 0px;
+    }
+    #top-section img{
+        height: 200px;
+        width: 100%;
+    }
+    #mid-section{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10px 50px;
+        gap: 20px;
+    }
+    #bottom-section div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10px 50px;
+        gap: 10px;
+    
+    }
+}
+
