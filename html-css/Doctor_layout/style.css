@@ -1,0 +1,92 @@
+body{
+  margin: 2px 100px;
+}
+/*top section  code*/
+#header{
+  
+  text-align: center;
+}
+#doctors{
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+#doctors > div{
+  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  padding:  0px 10px;
+}
+.buttons button{
+  border: #f2f3f4;
+  padding:  5px 10px;
+  background-color: #f2f3f4;
+  border-radius: 10px;
+  color: #5dade2;
+  font-size: 12px;
+}
+.buttons > .booknow{
+  background-color: #e74c3c ;
+  color: white;
+}
+/*bottom section code*/
+#service{
+  margin-top: 50px;
+  padding: 10px;
+  
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+#service > div{
+  
+  padding: 10px;
+}
+#service h5{
+  text-align: center;
+}
+#service .image{
+  display: flex;
+  justify-content: center;
+}
+#service p{
+  font-size: 14px;
+}
+
+/* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+  #doctors{
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+  #service{
+    margin-top: 50px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+}
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #doctors{
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  #service{
+    margin-top: 50px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
