@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continent</title>
+</head>
+<body>
+    <select  id="country_select">
+        
+        <option value="India">India</option>
+        <option value="United States of America">UNited States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+    </select>
+    <button id="continent">Find continent</button>
+</body>
+</html>
+<script>
+    let country = document.querySelector("#country_select").value;
+    let continent ="";
+    document.querySelector("#continent").addEventListener('click',findContinent);
+    
+   function findContinent(){
+    switch(country){
+        case 'India':
+        case 'China':
+        case 'Nepal':
+        case 'Singapore':
+            continent = "Asia";
+            break;
+        case 'France':
+        case 'Germany':
+        case 'Sweden' :
+            continent = "Europe";
+            break;
+        case 'United States of America':
+        case 'Mexico': 
+        case 'Canada': 
+            continent = "North America";
+            break;
+        case 'Argentina': 
+        case 'Brazil': 
+            continent = "South America";
+            break;
+        case 'Australia': 
+            continent = "Australia";
+            break;
+        case 'South Africa': 
+        case 'Nigeria': 
+            continent = "Africa";
+            break;
+        default: 
+            continent = "Unknown";
+    }
+    alert("The Continent is  " + continent);
+   }
+</script>
