@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="enter num1" id="num1">
+    <input type="number" placeholder="enter num2" id="num2">
+    <button onclick="myFunction()">Click here to find the exponent!</button>
+    <p></p>
+</body>
+</html>
+<script>
+    
+    function myFunction(){
+        let base = document.querySelector("#num1").value;
+    let exponent = document.querySelector("#num2").value;
+
+    //convert inputs into integer
+    base = parseInt(base);
+    exponent = parseInt(exponent);
+
+    //calculate the exponent using a loop
+    var result =1;
+    for(var i=0; i<exponent;i++){
+        result *= base;
+    }
+    //display the result in a alert message
+    alert(base + "^" + exponent + "=" + result);
+        //display the result in paragraph tag
+    document.querySelector("p").textContent = base + "^" + exponent+ "=" + result ;
+    }
+</script>
