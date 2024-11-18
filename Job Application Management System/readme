@@ -1,0 +1,21 @@
+# Job Application Management System
+
+# Overview
+    The Job Application Management System is a web-based application designed to streamline the process of job applications. It allows users to submit their application details, view submitted applications, and bookmark specific jobs for easy reference.
+
+# Features
+    Form Submission: Users can fill out a form to submit their job application details including Name, Email, Role, and Expected Salary.
+
+    Data Storage: Application data is stored locally using Local Storage.
+
+    Dynamic Data Display: Submitted applications are displayed dynamically in a structured table format.
+
+    Sorting and Filtering: Users can sort applications by Name and Salary, and filter by Role.
+
+    Bookmarking: Users can bookmark specific job applications for easy access.
+
+# Technologies Used
+    Front-end: HTML, CSS, JavaScript
+
+    Storage: Local Storage
+
