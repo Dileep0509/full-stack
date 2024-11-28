@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        .minmax-container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 24px;
+        }
+        #minValue{
+            height: 50px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            background-color: red;
+        }
+        #maxValue{
+            height: 50px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            background-color: green;
+        }
+        .score-container{
+            text-align: center;
+            margin: auto;
+            padding: 0px 500px;
+        }
+        #scoreBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            height: 100px;
+            width: 250px;
+            background-color: grey;
+            border-radius: 10px;
+            font-size: 24px;
+            
+        }
+        .num-container{
+            margin-top: 10px;
+            padding: 5px 15px;
+            display: grid;
+            grid-template-columns:repeat(3,50px) ;
+            grid-template-rows: repeat(4,50px);
+            gap: 20px;
+        }
+        .orange{
+            background-color: orange;
+            cursor: pointer;
+        }
+        .green{
+            background-color: green;
+            cursor: pointer;
+        }
+        .zero{
+            grid-column: 2;
+            background-color: violet;
+            cursor: pointer;
+        }
+        .enter{
+            margin-top: 10px;
+            height: 50px;
+            width: 250px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="minmax-container">
+            <div class="minbox">
+                <div id="minValue">43</div>
+                <p>MIN</p>
+            </div>
+            <div class="maxbox">
+                <div id="maxValue">2019</div>
+                <p>MAX</p>
+            </div>
+        </div>
+        <div class="score-container">
+            <p>SCORE</p>
+            <div id="scoreBox">#</div>
+            <div class="num-container">
+                <button class="green" onclick="addNum(1)">1</button>
+                <button class="orange" onclick="addNum(2)">2</button>
+                <button class="green" onclick="addNum(3)">3</button>
+                <button class="orange" onclick="addNum(4)">4</button>
+                <button class="orange" onclick="addNum(5)">5</button>
+                <button class="orange"onclick="addNum(6)">6</button>
+                <button class="green" onclick="addNum(7)">7</button>
+                <button class="orange" onclick="addNum(8)">8</button>
+                <button class="green" onclick="addNum(9)">9</button>
+                <button class="zero" onclick="addNum(0)">0</button>
+            </div>
+            <button class="enter" onclick="enterScore()">Enter</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+let currentScore = "";
+function addNum(num){
+    currentScore += num;
+    document.getElementById('scoreBox').innerText = currentScore;
+}
+function enterScore(){
+    let score = parseInt(currentScore);
+    let minBox = document.getElementById("minValue");
+    let maxBox = document.getElementById('maxValue');
+
+    let minScore = parseInt(minBox.innerText) || Infinity;
+    let maxScore = parseInt(maxBox.innerText) || -Infinity;
+
+    if(!isNaN(score)){
+        //Debugging
+        console.log('current score :',score);
+        console.log('minScore :',minScore);
+        console.log('maxScore :', maxScore);
+    }
+    //update the minScore if currentScore is less
+    if(score < minScore){
+        minBox.innerText = score;
+        console.log(minBox);
+    }
+
+    if(score > maxScore){
+        maxBox.innerText = score;
+    }
+    console.log('new min :', minBox.innerText);
+    console.log('new max:', maxBox.innerText);
+    resetScore();
+}
+function resetScore(){
+    currentScore= '';
+    document.getElementById('scoreBox').innerText = "#";
+}
+</script>
