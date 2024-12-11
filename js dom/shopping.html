@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="m,en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: block;
+            background-color: #f8f9fa;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .card p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+        .card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .card .striked-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container" id="product-container"></div>
+</body>
+</html>
+<script>
+    var data = [
+    {
+        imgUrl:"https://www.jiomart.com/images/product/original/rvyr2nwr74/scettro-blue-abstract-stylish-jordan-light-weight-trending-high-top-sneakers-for-men-product-images-rvyr2nwr74-0-202209052116.jpg?im=Resize=(500,630)",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDkRns93pLLx7ONE1d5nWIPRTWa0WsuA8I2w&s",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOdjKm11KkdpmT2Nqhkw9ELIVqqesAQTnEw&s",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://assetscdn1.paytm.com/images/catalog/product/F/FO/FOOAARNATO-MEN-AARN6424471269E1B1/1564572063597_0..jpg",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+
+    ];
+
+    var container = document.getElementById('product-container');
+
+    data.map(function (product){
+        var card =document.createElement('div');
+        card.className = "card";
+
+        card.innerHTML = `
+        <img src = "${product.imgUrl}" alt = "${product.name}" />
+        <h3>${product.name}</h3>
+        <p class = "price">${product.price}</p>
+        <p class = "striked-price">${product.strikedOffPrice}</p>
+
+        `;
+        container.appendChild(card);
+    });
+    
+</script>
