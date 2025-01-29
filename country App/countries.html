@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country App</title>
+    <link rel="stylesheet" href="./country.css">
+</head>
+<body>
+    <div class="sort-filter">
+        <!--sort by population-->
+        <select id="sort_population" onchange="sortByPopulation()">
+            <option value="">Sort by Population</option>
+            <option value="asc" id = "asc">ASC</option>
+            <option value="dsc" id = "dsc">DSC</option>
+        </select>
+
+        <!--filter by region -->
+        <select id="sort_region" onchange="filterByRegion()">
+            <option value="">Sort by Region</option>
+            <!--here options will be added from js-->
+
+        </select>
+    </div>
+
+    <div class="container" id="container">
+        <!-- country cards will append here-->
+
+    </div>
+
+</body>
+</html>
+<script>
+    async function fetchCountries(){
+        try{
+            let response =  await fetch('https://restcountries.com/v3.1/all'); //fetching data through api
+        let data = await response.json(); // converting json data into object
+        console.log(data);
+        return data;
+        }
+        catch (error){
+            console.log(error);
+        }
+    }
+    async function countryApp(){
+        let countries = await fetchCountries();
+        populateRegions(countries);
+        displayCountries(countries);
+    }    
+    function displayCountries(countries){
+        let container = document.querySelector('#container');
+        container.innerHTML =""; //clear existing countries
+
+        countries.forEach(country =>{
+            let countryContainer = document.createElement('div');
+            countryContainer.classList.add('country-card');
+            let countryName = document.createElement('h3');
+            countryName.innerHTML = country.name.common;
+            let image = document.createElement('img');
+            image.src = country.flags.png;
+            let population = document.createElement('p');
+            population.innerHTML = `Population :  ${country.population}`;
+            let region = document.createElement('p');
+            region.innerHTML = `Region : ${country.region}`;
+            let capital = document.createElement('p');
+            capital.innerHTML= `Capital : ${country.capital}`;
+            let container = document.querySelector('#container');
+
+            countryContainer.append(image,countryName,population,region,capital);
+            container.append(countryContainer); 
+        });
+    }
+    async function sortByPopulation(){
+        let sortOrder = document.querySelector("#sort_population").value;
+        let countries = await fetchCountries();
+
+        if (sortOrder === "asc"){
+            countries.sort((a,b)=>a.population - b.population);
+        }else if (sortOrder === "dsc"){
+            countries.sort((a,b)=>b.population - a.population);
+        }
+
+       let container = document.querySelector('#container');
+       container.innerHTML='';
+       
+       displayCountries(countries);
+    };
+
+    function populateRegions(countries){
+        const regionSelect = document.querySelector("#sort_region");
+        const regions = new Set();//use a set to store unique regions
+        countries.forEach(country => {
+            regions.add(country.region); // add each country's region to the set
+        });
+        //create an option for each unique regions
+        regions.forEach(region => {
+            const option = document.createElement("option");
+            option.value = region;
+            option.text =region;
+            regionSelect.appendChild(option);
+        });
+    };
+
+    async function filterByRegion(){
+        const selectedRegion = document.getElementById("sort_region").value;
+        let countries = await fetchCountries();
+        let filteredCountries;
+        
+        if(selectedRegion){
+            filteredCountries = countries.filter(country => country.region === selectedRegion);
+        }else{
+            filteredCountries = countries; // show all the countries if no region is selected
+        }
+        const container = document.querySelector("#container");
+        container.innerHTML= ""; //clear existing countries
+        displayCountries(filteredCountries);
+    };
+    countryApp();
+
+</script>
